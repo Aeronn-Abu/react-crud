@@ -88,11 +88,13 @@ function CrudTable() {
           <TextField 
             size="small"
             label="Title"
+            value={isEditing ? itemToEdit.title : ""}
             onChange={e => setInputItem({title: e.target.value})}
           />
           <TextField 
             size="small"
             label="Body"
+            value={isEditing ? itemToEdit.body : ""}
             onChange={e => setInputItem({...inputItem, body: e.target.value})}
           />
           <Button variant="contained" type="submit">
